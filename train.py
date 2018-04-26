@@ -2,7 +2,6 @@ import argparse
 import tensorflow as tf
 
 import data
-#import data_omniglot as data
 import model
 
 class EvalCheckpointSaverListener(tf.train.CheckpointSaverListener):

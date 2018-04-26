@@ -12,7 +12,6 @@ This code requires the following:
 * python 3.\*
 * tensorflow v1.0+
 * numpy
-* scipy
 
 ### Data
 
@@ -25,7 +24,7 @@ $ python3 train.py
 $ tensorboard --logdir ./logs
 ```
 
-The "accuracy" curves will look like the following, this one is for the second instance of a class in an episode:
+The accuracy curves will look like the following, this one is for the second instance of a class in an episode:
 
 ![alt text](https://github.com/markpwoodward/active_osl/raw/master/src/common/accuracy_02nd.png "accuracy training curve")
 
