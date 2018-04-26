@@ -15,7 +15,7 @@ This code requires the following:
 
 ### Data
 
-The Omniglot data is included with this project as tarballs of a train.npy and a validate.npy files, which are preprocessed versions of the [omniglot dataset](https://github.com/brendenlake/omniglot).
+A preprocessed version of the [original Omniglot dataset](https://github.com/brendenlake/omniglot) is included with this project.
 
 ### Usage
 
@@ -26,7 +26,7 @@ $ tensorboard --logdir ./logs
 
 The accuracy curves will look like the following, this one is for the second instance of a class in an episode:
 
-![alt text](https://github.com/markpwoodward/active_osl/raw/master/src/common/accuracy_02nd.png "accuracy training curve")
+![alt text](https://github.com/markpwoodward/active_osl/raw/master/accuracy_02nd.png "accuracy training curve")
 
 The code in this project builds a graph of the full training episode. If you wish to use the model after training, you would likely do one step at a time. Here is an example of what that code might look like:
 
