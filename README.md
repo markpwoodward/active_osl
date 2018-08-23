@@ -32,7 +32,7 @@ The code in this project builds a graph of the full training episode. If you wis
 
 ```python
 agent = model.Agent(False, params)
-action_t, _ = agent.next_action([last_label_t, features_t])not requested
+action_t, _ = agent.next_action([last_label_t, features_t])
 action, rnn_state = sess.run(
   [action_t, agent.rnn_state_t],
   {
