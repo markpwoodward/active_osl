@@ -31,8 +31,15 @@ The accuracy curves will look like the following, this one is for the second ins
 The code in this project builds a graph of the full training episode. If you wish to use the model after training, you would likely do one step at a time. Here is an example of what that code might look like:
 
 ```python
+last_label_t = tf.placeholder(tf.int32, shape=(1, params.num_labels))
+features_t = tf.placeholder(tf.int32, shape=(1, 28, 28)) # shape of your data
 agent = model.Agent(False, params)
 action_t, _ = agent.next_action([last_label_t, features_t])
+# loop, calling the following. 
+#   Feeds the model with a numpy variables of yours called "features" and "last_label"
+#   last_label will generally be zeros, unless "action" requested the last label
+#   the numpy variable rnn_state is updated on each call.
+#   the numpy variable action will tell you what the model wants of you
 action, rnn_state = sess.run(
   [action_t, agent.rnn_state_t],
   {
