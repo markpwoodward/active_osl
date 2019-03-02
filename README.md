@@ -38,8 +38,8 @@ action_t, _ = agent.next_action([last_label_t, features_t])
 # loop, calling the following. 
 #   Feeds the model with a numpy variables of yours called "features" and "last_label"
 #   last_label will generally be zeros, unless "action" requested the last label
-#   the numpy variable rnn_state is updated on each call.
-#   the numpy variable action will tell you what the model wants of you
+#   The numpy variable rnn_state is updated on each call.
+#   The numpy variable action will tell give you the model's chosen action
 action, rnn_state = sess.run(
   [action_t, agent.rnn_state_t],
   {
